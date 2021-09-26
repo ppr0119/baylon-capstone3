@@ -1,0 +1,56 @@
+.Nav-bg {
+	background-color:rgb(174, 236, 221);
+	font-family: 'Oswald', sans-serif;
+}
+
+.Nav-link {
+	color: #000000 !important;
+}
+
+.Banner-bg {
+	background-image: url("home-background.jpg");
+	background-size: cover;
+	height: 350px;
+	margin: auto;
+	text-align: center;
+	background-position: center;
+	font-family: 'Oswald', sans-serif;
+	font-size: 20px;	
+}
+
+.Collection-card {
+        margin: 0 auto; 
+        float: none; 
+        margin-bottom: 10px;
+}
+
+.Container-Form {
+	margin-top: 15px;
+	font-family: 'Oswald', sans-serif;
+}
+
+.Form-btn {
+	background-color: rgb(186, 234, 222);
+	border: none;
+	color: black;
+}
+
+
+@media (min-width: 768px) {
+	.Banner-bg {
+		font-size: 30px;
+	}
+	.Container-Form{
+		margin-top: 20px;
+		width: 	600px;
+	}
+	.Form-btn {
+		width: 	570px;
+	}
+}
+
+@media (min-width: 992px) {
+	.Banner-bg {
+		font-size: 40px;
+	}
+}
