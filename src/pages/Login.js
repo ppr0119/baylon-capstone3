@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useContext} from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, NavLink} from 'react-router-dom';
 import UserContext from './../UserContext';
-import {Container, Form, Button} from 'react-bootstrap';
+import {Container, Form, Button, Nav} from 'react-bootstrap';
 import Swal from 'sweetalert2';
 
 
@@ -39,8 +39,9 @@ export default function Login(){
       if(result === false){
         Swal.fire({
           title: 'Account does not exist!',
-          icon: 'error',
-          text: 'Check your email and password.'
+          customClass: {
+            title: 'swal-title',
+          }
         })
       } else {
         
@@ -79,7 +80,8 @@ export default function Login(){
 
     : 
       <Container className="Container-Form">
-        <h2 className="text-center">LOGIN</h2>
+        <h2 className="Form-name text-center">LOGIN</h2>
+        <Nav.Link as={NavLink} to="/register"> <p className="aLink text-center">Don't have an account yet?</p> </Nav.Link>
         <Form onSubmit={ (e) => login(e) }>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>

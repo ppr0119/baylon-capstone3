@@ -1,10 +1,13 @@
+* {
+	background-color: rgb(255, 244, 175);
+}
+
 .Nav-bg {
-	background-color:rgb(174, 236, 221);
 	font-family: 'Oswald', sans-serif;
 }
 
 .Nav-link {
-	color: #000000 !important;
+	color: rgb(41, 23, 9) !important;
 }
 
 .Banner-bg {
@@ -15,26 +18,89 @@
 	text-align: center;
 	background-position: center;
 	font-family: 'Oswald', sans-serif;
-	font-size: 20px;	
+	font-size: 20px;
+	color: black;	
 }
 
-.Collection-card {
-        margin: 0 auto; 
-        float: none; 
-        margin-bottom: 10px;
+.Banner-Text {
+	background-color: transparent !important;
 }
 
-.Container-Form {
-	margin-top: 15px;
-	font-family: 'Oswald', sans-serif;
+.Highlights-row {
+	padding: 18px 0px;
+	margin: auto;
+	background-color: rgb(69, 35, 12);
 }
 
-.Form-btn {
-	background-color: rgb(186, 234, 222);
+.Highlights-col {
+	background-color: transparent !important;
+}
+
+.Highlights-card {
+	font-style: italic;
+	color: black;
+}
+
+.Highlights-btn{
+	background-color: rgb(131, 91, 58);
+	font-style: bold;
 	border: none;
 	color: black;
 }
 
+.Collection-card {
+        margin: 0 auto;
+        margin-bottom: 5px; 
+        float: none; 
+        size: auto;
+      	border-style: solid;
+	border-color: rgb(69, 35, 12);
+}
+
+.Container-Form {
+	margin-top: 25px;
+	font-family: 'Oswald', sans-serif;
+	color: rgb(41, 23, 9);
+	border-style: solid;
+	border-radius: 10px;
+	border-color: rgb(69, 35, 12);
+	
+}
+.Form-name {
+	padding-top: 15px;
+}
+
+.Form-btn {
+	background-color: rgb(131, 91, 58);
+	border: none;
+	color: black;
+	margin-bottom: 25px;
+}
+
+.aLink {
+	color: rgb(41, 23, 9);
+}
+
+.Product-title {
+	font-family: 'Dancing Script';
+	font-size: 30px;
+}
+
+.Product-description {
+	font-family: 'Barlow Condensed';
+	font-size: 18px;
+}
+
+
+.Details-btn {
+	background-color: rgb(186, 130, 84);
+	font-family: 'Oswald', sans-serif;
+	border: none;
+}
+
+.swal-title {
+	background: unset;
+}
 
 @media (min-width: 768px) {
 	.Banner-bg {
@@ -47,6 +113,13 @@
 	.Form-btn {
 		width: 	570px;
 	}
+
+	.Collection-card {
+       		width: 500px;
+	}
+	.Form-quantity {
+		width: 350px;
+}
 }
 
 @media (min-width: 992px) {

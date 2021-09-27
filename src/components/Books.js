@@ -7,14 +7,12 @@ export default function Book({bookProp}){
 	const {productName, productDescription, price, _id} = bookProp
 
 	return(
-		<Card className="mb-3">
+		<Card className="Collection-card mb-3">
 			<Card.Body>
-				<Card.Title>{productName}</Card.Title>
-				<h5>Book Summary:</h5>
-				<p>{productDescription}</p>
-				<h5>Price:</h5>
-				<p>{price}</p>
-		    	<Link className="btn btn-primary" to={`/books/${_id}`}>
+				<Card.Title className="Product-title">{productName}</Card.Title> <hr/>
+				<p className="Product-description">{productDescription}</p>
+				<p><b>Price:</b> Php {price}</p>
+		    	<Link className="Details-btn btn" to={`/books/${_id}`}>
 		    		Check Out
 		    	</Link>
 			</Card.Body>

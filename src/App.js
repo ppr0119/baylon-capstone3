@@ -10,6 +10,7 @@ import ErrorPage from './components/ErrorPage';
 import Books from './pages/Books';
 import UserOrder from './pages/UserOrder';
 import Collection from './pages/Collection';
+import './components/Style.css';
 
 export default function App(){
 

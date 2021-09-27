@@ -97,8 +97,8 @@ export default function Register(){
 
 		:
 			<Container className="Container-Form">
-				<h2 className="text-center mt-3">REGISTER</h2>
-				<Nav.Link as={NavLink} to="/login"> <p className="text-center">Already registered?</p> </Nav.Link>
+				<h2 className="Form-name text-center mt-3">REGISTER</h2>
+				<Nav.Link as={NavLink} to="/login"> <p className="aLink text-center">Already registered?</p> </Nav.Link>
 				<Form onSubmit={(e)=> register(e)}>
 					<Form.Group className="mb-3" controlId="formfirstName">
 						<Form.Label>First Name</Form.Label>

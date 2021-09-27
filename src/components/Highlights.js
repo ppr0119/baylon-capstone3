@@ -1,46 +1,49 @@
-import React from 'react';
-import { Row, Col, Card, Button } from 'react-bootstrap';
+import React, {useContext} from 'react';
+import { Row, Col, Card} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
+import UserContext from './../UserContext';
 
 export default function Highlights(){
+
+	const {user} = useContext(UserContext);
 	
 	return(
 
 
-		<Row className="px-3">
-			<Col xs={12} md={4}>
-				<Card>
-					<Card.Img variant="top" src="https://www.mitchalbom.com/wp-content/uploads/2015/07/us_ttk_carousel.png" />
+		<Row className="Highlights-row" >
+			<Col className="Highlights-col" xs={12} md={6}>
+				<Card className="Highlights-card">
 					<Card.Body>
-						<Card.Title>Learn from Home</Card.Title>
 						<Card.Text>
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident perspiciatis adipisci accusamus animi fugiat, similique, minus odit alias voluptatem blanditiis velit cupiditate voluptatibus dicta expedita consequuntur nobis ullam magni quae?
+							<p>“That’s the thing when people leave us too suddenly, isn’t it? We always have so many questions.”</p>
+							<p>― Mitch Albom, The First Phone Call from Heaven</p>
 						</Card.Text>
-				    	<Button variant="primary">Go somewhere</Button>
+				    	{
+				    		(user.id !== null) ?
+								<Link className="Highlights-btn btn" to={`/books`}>See Book Details</Link>
+							:
+								<Link className="Highlights-btn btn" to={`/collections`}>See Book Details</Link>
+				    	}
 					</Card.Body>
 				</Card>
 			</Col>
-			<Col xs={12} md={4}>
-				<Card>
+			<Col className="Highlights-col" xs={12} md={6}>
+				<Card className="Highlights-card">
 					<Card.Body>
-						<Card.Title>Study Now, Pay Later</Card.Title>
 						<Card.Text>
-					      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident perspiciatis adipisci accusamus animi fugiat, similique, minus odit alias voluptatem blanditiis velit cupiditate voluptatibus dicta expedita consequuntur nobis ullam magni quae?
+					      <p>“Each affects the other, and the other affects the next, and the world is full of stories, but the stories are all one.”</p>
+					      <p>― Mitch Albom, The Five People You Meet In Heaven</p>
 						</Card.Text>
-				    	<Button variant="primary">Go somewhere</Button>
+				    	{
+				    		(user.id !== null) ?
+								<Link className="Highlights-btn btn" to={`/books`}>See Book Details</Link>
+							:
+								<Link className="Highlights-btn btn" to={`/collections`}>See Book Details</Link>
+				    	}
 					</Card.Body>
 				</Card>
 			</Col>
-			<Col xs={12} md={4}>
-				<Card>
-					<Card.Body>
-						<Card.Title>Be Part of the Community</Card.Title>
-						<Card.Text>
-					      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident perspiciatis adipisci accusamus animi fugiat, similique, minus odit alias voluptatem blanditiis velit cupiditate voluptatibus dicta expedita consequuntur nobis ullam magni quae?
-						</Card.Text>
-				    	<Button variant="primary">Go somewhere</Button>
-					</Card.Body>
-				</Card>
-			</Col>
+
 		</Row>
 
 

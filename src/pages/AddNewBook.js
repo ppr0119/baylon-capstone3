@@ -28,8 +28,6 @@ export default function AddNewBook(){
 	}, [productName, productDescription, price]);
 
 
-
-
 	function addBook(e){
 
 		e.preventDefault();
@@ -51,9 +49,10 @@ export default function AddNewBook(){
 
 			if(result === true){
 				Swal.fire({
-					title: "Success",
-					icon: "success",
-					text: "New Book Added"
+					title: "New Book Added",
+					customClass: {
+						title: 'swal-title',
+					}
 				})
 
 				history.push('/books');
@@ -61,9 +60,10 @@ export default function AddNewBook(){
 			} else {
 
 				Swal.fire({
-					title: "Failed",
-					icon: "error",
-					text: "Please try again"
+					title: "Please try again",
+					customClass: {
+						title: 'swal-title',
+					}
 				})
 
 			}
@@ -79,7 +79,7 @@ export default function AddNewBook(){
 	return(
 		 (user.isAdmin === true) ? 
 		<Container className="Container-Form my-5" >
-			<h2 className="text-center">ADD NEW BOOK</h2>
+			<h2 className="Form-name text-center">ADD NEW BOOK</h2>
 			<Form onSubmit={ e => addBook(e)}>
 				<Form.Group>
 					<Form.Label>TITLE OF THE BOOK:</Form.Label>

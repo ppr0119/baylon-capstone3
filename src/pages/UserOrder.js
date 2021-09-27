@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react';
 import UserContext from './../UserContext';
 import {Link, useParams, useHistory} from 'react-router-dom';
-import {Container, Card, Button, Form} from 'react-bootstrap';
+import {Container, Card, Form, Row, Col, Button} from 'react-bootstrap';
 import Swal from 'sweetalert2';
 
 export default function UserOrder(){
@@ -34,7 +34,7 @@ export default function UserOrder(){
 	}, [bookId, token])
 
 	const createOrder = () => {
-
+		
 		fetch(`https://polar-brushlands-73295.herokuapp.com/ecommerce/users/checkout`, 
 			{
 				method: "POST",
@@ -52,17 +52,19 @@ export default function UserOrder(){
 		.then(result => {
 			if(result === true){
 				Swal.fire({
-					title: "Success",
-					icon: "success",
-					text: "Thank you for your Order!" 
+					title: "Thank you for your Order!",
+					customClass: {
+						title: 'swal-title',
+					}
 				})
 
 				history.push('/books');
 			} else {
 				Swal.fire({
-					title: "Failed",
-					icon: "error",
-					text: "Please try again" 
+					title: "Please try again",
+					customClass: {
+						title: 'swal-title',
+					}
 				})
 			}
 		})
@@ -70,40 +72,25 @@ export default function UserOrder(){
 
 	return(
 		<Container>
-			<Card>
-				<Card.Header>
-					<h4>
-						{productName}
-					</h4>
-				</Card.Header>
+			<Card className="Collection-card">
+				<Card.Header className="Product-title"> {productName} </Card.Header>
 				<Card.Body>
-					<Card.Text>
-						{productDescription}
-					</Card.Text>
+					<Card.Text className="Product-description">{productDescription}</Card.Text>
 					<h6>
-						Price: Php 
-						<span className="mx-2">{price}</span>
+						<b>Price:</b>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+						Php {price}
 					</h6>
-					<h6>
-						Quantity:
-					<Form.Control
-						type="number"
-						value={quantity}
-						onChange={(e) => setQuantity(e.target.value)}
-					/>
-						
-					</h6>
-					
+					<Row>
+						<Col><b>Quantity:</b></Col>
+						<Col><Form.Control className="Form-quantity" type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)}/></Col>
+					</Row>					
 				</Card.Body>
 				<Card.Footer>
 					{
 						(user.id !== null) ?
-								<Button variant="primary" 
-								onClick={createOrder}
-
-								> Order</Button>
+								<Button className="Details-btn btn" onClick={createOrder} > Order</Button>
 							:
-								<Link className="btn btn-danger" to="/login">Login to Order</Link>
+								<Link className="Details-btn btn"to="/login">Login to Order</Link>
 					}
 				</Card.Footer>
 			</Card>

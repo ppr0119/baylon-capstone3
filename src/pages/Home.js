@@ -7,8 +7,8 @@ export default function Home(){
 
 	return(
 		<Fragment>
-		<Banner/>
-		<Highlights/>
+			<Banner/>
+			<Highlights/>
 		</Fragment>
 			
 		

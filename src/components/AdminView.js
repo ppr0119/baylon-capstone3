@@ -117,9 +117,10 @@ export default function AdminView(props){
 			if(typeof result !== "undefined"){
 
 				Swal.fire({
-					title: "Success",
-					icon: "success",
-					text: "Update Successful"
+					title: "Update Successful!",
+					customClass: {
+						title: 'swal-title',
+					}
 				})
 
 				closeEdit();
@@ -128,9 +129,10 @@ export default function AdminView(props){
 				fetchData()
 
 				Swal.fire({
-					title: "Failed",
-					icon: "error",
-					text: "Something went wrong!"
+					title: "Something went wrong!",
+					customClass: {
+						title: 'swal-title',
+					}
 				})
 			}
 		})
@@ -154,16 +156,19 @@ export default function AdminView(props){
 			fetchData();
 			if(result === true){
 				Swal.fire({
-					title: "Success",
-					icon: "success",
-					"text": "Successfully Archived"
+					title: "Successfully Archived",
+					customClass: {
+						title: 'swal-title',
+					}
+				
 				})
 			} else {
 				fetchData();
 				Swal.fire({
 					title: "Something went wrong",
-					icon: "error",
-					"text": "Please try again"
+					customClass: {
+						title: 'swal-title',
+					}
 				})
 			}
 		})
@@ -185,16 +190,18 @@ export default function AdminView(props){
 			fetchData();
 			if(result === true){
 				Swal.fire({
-					title: "Success",
-					icon: "success",
-					"text": "Successfully Unarchived"
+					title: "Successfully Unarchived",
+					customClass: {
+						title: 'swal-title',
+					}
 				})
 			} else {
 				fetchData();
 				Swal.fire({
 					title: "Something went wrong",
-					icon: "error",
-					"text": "Please try again"
+					customClass: {
+						title: 'swal-title',
+					}
 				})
 			}
 		})
@@ -213,16 +220,18 @@ export default function AdminView(props){
 			fetchData();
 			if(result === true){
 				Swal.fire({
-					title: "Success",
-					icon: "success",
-					"text": "Deleted successfully"
+					title: "Deleted successfully!",
+					customClass: {
+						title: 'swal-title',
+					}
 				})
 			} else {
 				fetchData();
 				Swal.fire({
 					title: "Something went wrong",
-					icon: "error",
-					"text": "Please try again"
+					customClass: {
+						title: 'swal-title',
+					}
 				})
 			}
 		})
@@ -249,9 +258,11 @@ export default function AdminView(props){
 				fetchData()
 
 				Swal.fire({
-					title: "Success",
-					icon: "success",
-					text: "Course successfully added"
+					title: "Book successfully added!",
+					customClass: {
+						title: 'swal-title',
+					}
+					
 				})
 
 				setProductName("")
@@ -264,9 +275,11 @@ export default function AdminView(props){
 				fetchData();
 
 				Swal.fire({
-					title: "Failed",
-					icon: "error",
-					text: "Something went wrong"
+					title: "Something went wrong",
+					customClass: {
+						title: 'swal-title',
+					}
+					
 				})
 			}
 		})
