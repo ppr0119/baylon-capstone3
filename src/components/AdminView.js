@@ -47,7 +47,7 @@ export default function AdminView(props){
 	useEffect( () => {
 		const arrayOfBooks = bookData.map( (books) => {
 			return(
-				<tr key={books._id}>
+				<tr className ="AdminProductDetails" key={books._id}>
 					<td>{books.productName}</td>
 					<td>{books.productDescription}</td>
 					<td>{books.price}</td>
@@ -288,14 +288,14 @@ export default function AdminView(props){
 	return(
 		<Container>
 			<div>
-				<h2 className="text-center">Admin Dashboard</h2>
+				<h2 className="Admin text-center">Admin Dashboard</h2>
 				<div className="d-flex justify-content-end mb-2">
-					<Button variant="primary" onClick={openAdd}>Add New Book</Button>
+					<Button className ="AdminProductDetails" variant="primary" onClick={openAdd}>Add New Book</Button>
 				</div>
 			</div>
-			<Table>
+			<Table responsive="sm">
 				<thead>
-					<tr>
+					<tr className="Admin">
 						<th>Name</th>
 						<th>Description</th>
 						<th>Price</th>

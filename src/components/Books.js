@@ -11,7 +11,7 @@ export default function Book({bookProp}){
 			<Card.Body>
 				<Card.Title className="Product-title">{productName}</Card.Title> <hr/>
 				<p className="Product-description">{productDescription}</p>
-				<p><b>Price:</b> Php {price}</p>
+				<p className="Product-description"><b>Price:</b> Php {price}</p>
 		    	<Link className="Details-btn btn" to={`/books/${_id}`}>
 		    		Check Out
 		    	</Link>

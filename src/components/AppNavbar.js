@@ -40,10 +40,10 @@ export default function AppNavbar(){
 
 
   return (
-    <Navbar className="Nav-bg">
+    <Navbar collapseOnSelect expand="lg" className="Nav-bg">
       <Navbar.Brand as={Link} to="/" className="Nav-link">LIBROry</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
+      <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
           {userLogIn}
         </Nav>

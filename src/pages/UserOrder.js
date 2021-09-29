@@ -9,7 +9,7 @@ export default function UserOrder(){
 	const [productName, setProductName] = useState('');
 	const [productDescription, setProductDescription] = useState('');
 	const [price, setPrice] = useState(0);
-	const [quantity, setQuantity] = useState(0);
+	const [quantity, setQuantity] = useState(1);
 	const {user} = useContext(UserContext);
 	const {bookId} = useParams();
 

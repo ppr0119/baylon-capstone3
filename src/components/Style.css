@@ -3,7 +3,7 @@
 }
 
 .Nav-bg {
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Fredoka One', sans-serif;
 }
 
 .Nav-link {
@@ -17,7 +17,7 @@
 	margin: auto;
 	text-align: center;
 	background-position: center;
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Fredoka One', sans-serif;
 	font-size: 20px;
 	color: black;	
 }
@@ -37,8 +37,12 @@
 }
 
 .Highlights-card {
-	font-style: italic;
+	font-family: 'Raleway', sans-serif;
 	color: black;
+}
+
+.Highlights-quote {
+	font-style: italic;
 }
 
 .Highlights-btn{
@@ -46,6 +50,7 @@
 	font-style: bold;
 	border: none;
 	color: black;
+	font-family: 'Fredoka One', sans-serif;
 }
 
 .Collection-card {
@@ -59,13 +64,14 @@
 
 .Container-Form {
 	margin-top: 25px;
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Fredoka One', sans-serif;
 	color: rgb(41, 23, 9);
 	border-style: solid;
 	border-radius: 10px;
 	border-color: rgb(69, 35, 12);
 	
 }
+
 .Form-name {
 	padding-top: 15px;
 }
@@ -75,6 +81,7 @@
 	border: none;
 	color: black;
 	margin-bottom: 25px;
+	font-family: 'Fredoka One', sans-serif;
 }
 
 .aLink {
@@ -82,24 +89,44 @@
 }
 
 .Product-title {
-	font-family: 'Dancing Script';
-	font-size: 30px;
+	font-family: 'Fredoka One', sans-serif;
+	font-size: 25px;
 }
 
 .Product-description {
-	font-family: 'Barlow Condensed';
-	font-size: 18px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 15px;
 }
 
 
 .Details-btn {
 	background-color: rgb(186, 130, 84);
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Fredoka One', sans-serif;
 	border: none;
 }
 
 .swal-title {
 	background: unset;
+}
+
+.Errorpage {
+	background-color: unset;
+	font-family: 'Fredoka One', sans-serif;
+}
+
+.ErrorPageBtn {
+	background-color: rgb(186, 130, 84);
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+	border: none;
+}
+
+.Admin {
+	font-family: 'Fredoka One', sans-serif;
+}
+
+.AdminProductDetails {
+	font-family: 'Raleway', sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -119,7 +146,7 @@
 	}
 	.Form-quantity {
 		width: 350px;
-}
+	}
 }
 
 @media (min-width: 992px) {
